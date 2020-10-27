@@ -45,3 +45,28 @@ for i, p in enumerate(wedges):
 ax.set_title("Distribution of languages in the training data")
 
 plt.show()
+
+# DEUXIEME VISUALISATION DES DONNEES :
+
+sntmnt=pd.DataFrame()
+sntmnt['type']=train.label.value_counts().index
+sntmnt['count']=train.label.value_counts().values
+
+import seaborn as sns
+class_name = ['Implication', 'Neutre','Contradiction']
+sns.countplot(train.label)
+plt.xlabel('Differents sentiments')
+plt.ylabel('Nombre de chacun des sentiments')
+
+
+# CREATION D'UN ECHANTILLON AVEC UNIQUEMENT LE LANGUAGE ANGLAIS
+english_train = train[train['language'] == 'English']
+english_train
+
+# DECOMPOSITION DES PHRASES :
+english_train['premise'].iloc[4]
+
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import word_tokenize
+word_tokenize(english_train['premise'].iloc[4])
