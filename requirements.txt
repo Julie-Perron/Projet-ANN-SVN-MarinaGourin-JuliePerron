@@ -8,3 +8,4 @@ matplotlib.pyplot
 seaborn
 nltk
 notebook
+tensorflow
