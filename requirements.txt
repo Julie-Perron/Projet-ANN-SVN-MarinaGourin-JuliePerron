@@ -1,0 +1,10 @@
+ipython
+pandas
+numpy
+gensim
+scikit-learn
+matplotlib
+matplotlib.pyplot
+seaborn
+nltk
+notebook
